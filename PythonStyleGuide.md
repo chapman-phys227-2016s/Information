@@ -193,18 +193,18 @@ using docstrings helps integrate your code into the python help system.
 
 Example:
 
-  """
-  File: <filename>  
-  Copyright (c) 2016 <your name>
-  License: MIT
+    """
+    File: <filename>  
+    Copyright (c) 2016 <your name>
+    License: MIT
 
-  Course: PHYS227
-  Assignment: 1.1
-  Date: Feb 7, 2016
-  Email: somebody@mail.chapman.edu
-  Name: Som Ebody
-  Description: a basic start-up program.
-  """
+    Course: PHYS227
+    Assignment: 1.1
+    Date: Feb 7, 2016
+    Email: somebody@mail.chapman.edu
+    Name: Som Ebody
+    Description: a basic start-up program.
+    """
 
 ### Function Comments  
 
