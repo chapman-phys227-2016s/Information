@@ -210,9 +210,9 @@ using docstrings helps integrate your code into the python help system.
 Example:
 
 	def calcHypotenuse(a, b):
-	    """Solve the Pythagorean theorem a^2 + b^2 = c^2 for the value of c.
+      """Solve the Pythagorean theorem a^2 + b^2 = c^2 for the value of c.
 
-	    Inputs: a and b are the lengths of sides of a right triangle.
+      Inputs: a and b are the lengths of sides of a right triangle.
       Output: c is the length of the hypotenuse.
       """
       return math.sqrt(a**2 + b**2)
