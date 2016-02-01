@@ -1,18 +1,18 @@
 #     Python Style Guide
 
-Simplified version for beginner programmers by John Magee based on 
+Simplified version for beginner programmers by John Magee based on
 [http://www.python.org/dev/peps/pep-0008](Style Guide for Python Code).
-	  
+
 ##  Introduction
 
 This simplified style guide is intended to help beginner Python progammers adhere to basic coding conventions. Properly styled computer code is more easily read and understood by humans. You may revisit code you write later, or you may work on code with other people in the future. It's important that your code is easily understood by yourself and others.
-        
-This guide is a simplified version of *Style Guide for Python Code* by Guido van Rossum and Barry Warsaw. The original document has been placed in the public domain by the authors and is available here: 
+
+This guide is a simplified version of *Style Guide for Python Code* by Guido van Rossum and Barry Warsaw. The original document has been placed in the public domain by the authors and is available here:
 [http://www.python.org/dev/peps/pep-0008]().
 
 
 ## Consistency
- 
+
 Code is read much more often than it is written. The guidelines provided here are intended to improve the
 readability of code and make it consistent across the wide spectrum of Python code.  So readability counts.
 
@@ -35,15 +35,15 @@ For really old code that you don't want to mess up, you can continue to use 8-sp
 ### Tabs or Spaces?
 
 Never mix tabs and spaces.
-    
+
 The most popular way of indenting Python is with spaces only.
 
 ### Maximum Line Length
 
 Limit all lines to a maximum of 79 characters.
 
-There are still many devices around that are limited to 80 character lines; plus, limiting windows to 80 characters makes it possible to have several windows side-by-side. The default wrapping on such devices disrupts the visual structure of the code, making it more difficult to understand.  Therefore, please limit all lines to a maximum of 79 characters. 
-    
+There are still many devices around that are limited to 80 character lines; plus, limiting windows to 80 characters makes it possible to have several windows side-by-side. The default wrapping on such devices disrupts the visual structure of the code, making it more difficult to understand.  Therefore, please limit all lines to a maximum of 79 characters.
+
 The preferred way of wrapping long lines is by using Python's implied line continuation inside parentheses, brackets and braces.  If necessary, you can add an extra pair of parentheses around an expression, but sometimes using a backslash looks better.
 
 ### Blank Lines
@@ -53,19 +53,19 @@ Separate top-level function and class definitions with two blank lines. Method d
 Extra blank lines may be used (sparingly) to separate groups of related functions.  Blank lines may be omitted between a bunch of related one-liners (e.g. a set of dummy implementations).
 
 Use blank lines in functions, sparingly, to indicate logical sections.
-     
+
 ## Imports
 ### Placement    
-     
+
 Imports are always put at the top of the file, just after any module comments and docstrings, and before module globals and constants.
 
 **Note:** Our text violates this. Please adhere to the convention in your own code.
-      
+
 ### Formatting
 
 Imports should usually be on separate lines, e.g.:
 
-Yes: 
+Yes:
 
 	import os
 	import sys
@@ -73,7 +73,7 @@ Yes:
 No:  
 
 	import sys, os
-	
+
 It's okay to write this though:
 
 	from subprocess import Popen, PIPE
@@ -83,7 +83,7 @@ It's okay to write this though:
 
 Immediately inside parentheses, brackets or braces.
 
-Yes: 
+Yes:
 
 	spam(ham[1], {eggs: 2})
 
@@ -93,27 +93,27 @@ No:
 
 Immediately before a comma, semicolon, or colon:
 
-Yes: 
+Yes:
 
 	if x == 4: print x, y; x, y = y, x
 
 No:
-  
+
 	if x == 4 : print x , y ; x , y = y , x
 
 Immediately before the open parenthesis that starts the argument list of a function call:
 
 Yes:
- 
+
 	spam(1)
-     
+
 No:
 
 	spam (1)
 
 Immediately before the open parenthesis that starts an indexing or slicing:
 
-Yes: 
+Yes:
 
 	dict['key'] = list[index]
 
@@ -135,7 +135,7 @@ No:
 	y             = 2
 	long_variable = 3
 
-         
+
 ### Places to use spaces:
 
 Always surround these binary operators with a single space on either side: assignment (=), augmented assignment (+=, -= etc.), comparisons (==, &lt;, &gt;, !=, &lt;&gt;, &lt;=, &gt;=, **in**, **not in**, **is**, **is not**), Booleans (**and**, **or**, **not**).
@@ -174,7 +174,7 @@ Rather not:
 	do_one(); do_two(); do_three()
 
 ## Comments
-      
+
 Comments that contradict the code are worse than no comments.  Always make a priority of keeping the comments up-to-date when the code changes.
 
 Comments should be complete sentences.  If a comment is a phrase or sentence, its first word should be capitalized, unless it is an identifier that begins with a lower case letter (never alter the case of identifiers).
@@ -186,9 +186,9 @@ You should use two spaces after a sentence-ending period.
 ### Header Comments
 Header comments appear at the top of a file. These lines typically include the filename, author, date, version number, and a description of what the file is for and what it contains. For class assignments, headers should also course name, number, section, instructor, and assignment
 number.
- 
+
  Example:
- 
+
  	# course: cs108
 	# Assignment: 1.1
 	# date: Feb 7, 2016
@@ -198,22 +198,29 @@ number.
 
 ### Function Comments  
 
-Function comments are like the description part of a header comment, but contain information specific to what a function does. These comments should also include a description of the purpose and expected input arguments, the expected output values, and how error conditions are handled.
+Function comments are like the description part of a header comment, but contain
+information specific to what a function does. These comments should also include
+a description of the purpose and expected input arguments, the expected output
+values, and how error conditions are handled.
 
-Put a line of comment characters before each function definition to help visually separate each function within your code.
+The detailed documentation of functions is best placed in a python *docstring*
+after the function definition, rather than in ad hoc comment strings. Properly
+using docstrings helps integrate your code into the python help system.
 
 Example:
 
-	################################################
-	# calcHypotenuse(a, b)
-	# This function solves Pythagorean theorem a^2 + b^2 = c^2
-	# for the value of c.
-	# inputs: a and b are the lengths of sides of a right triangle.
-	# returns: the length of the hypotenuse.
 	def calcHypotenuse(a, b):
-		...
-  
-   
+	    """Solve the Pythagorean theorem a^2 + b^2 = c^2 for the value of c.
+
+	    Inputs: a and b are the lengths of sides of a right triangle.
+			Output: c is the length of the hypotenuse.
+			"""
+		  return math.sqrt(a**2 + b**2)
+
+Ideally your code should be self-documenting and Pythonic, so docstrings should
+be used liberally. Other common conventions like littering your code with
+irrelevant comment strings ##### are discouraged in favor of code clarity.
+
 ### Block Comments
 
 Block comments generally apply to some (or all) code that follows them, and are indented to the same level as that code.  Each line of a block comment starts with a # and a single space (unless it is indented text inside the comment).
@@ -236,19 +243,18 @@ But sometimes, something like this  is useful:
 
 ##  Naming Conventions
 
-There are various naming conventions used in Python and other programming languages. The two common ones we will seeare lowercase_with_underscore and mixedCase (aka lowerCamelCase).
+There are various naming conventions used in Python and other programming languages. The two common ones we will see are lowercase_with_underscore and mixedCase (aka lowerCamelCase).
 
 For consistency, we should stick to the mixedCase convention. Multi-word names should start with a lowercase letter, and each new word should start with a capital letter. You can never have a space within a name. For example,
-         
+
 	sumOfSquares
 	printHappyBirthday
 	totalApples
-         
+
 ### Names to Avoid
-         
+
 Never use the characters `l` (lowercase letter el), `O` (uppercase letter oh), or `I` (uppercase letter eye) as single character variable names.
 
-In some typefaces, these characters are indistinguishable from the numerals one and zero. 
+In some typefaces, these characters are indistinguishable from the numerals one and zero.
 
 In general, try to avoid using single character names. There are some times when using `x`, `y`, `z` for axis names, or `a`, `b`, `c` for the sides of a triangle, or `i`, `j`, `k` for indices will make sense,  For most other cases, create names that have meaning for their function.
-     
