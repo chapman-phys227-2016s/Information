@@ -191,14 +191,12 @@ The detailed file documentation is best placed in a python *docstring*
 at the top of the file, rather than in ad hoc comment strings. Properly
 using docstrings helps integrate your code into the python help system.
 
- Example:
+Example:
 
   """
-  File: <filename>
-
+  File: <filename>  
   Copyright (c) 2016 <your name>
-
-	License: MIT
+  License: MIT
 
   Course: PHYS227
   Assignment: 1.1
@@ -206,7 +204,7 @@ using docstrings helps integrate your code into the python help system.
   Email: somebody@mail.chapman.edu
   Name: Som Ebody
   Description: a basic start-up program.
-	"""
+  """
 
 ### Function Comments  
 
