@@ -8,6 +8,8 @@
     * [tryGit Tutorial](https://try.github.io/levels/1/challenges/1)
     * [Git Tutorial](http://git-scm.com/docs/gittutorial)
     * [Git User Manual](http://git-scm.com/docs/user-manual.html)
+* Markdown Resources:
+    * [Learn Markdown in Y Minutes](https://learnxinyminutes.com/docs/markdown/)
 * Python Resources:
     * [Python Style Guide](PythonStyleGuide.md)
     * [Learn Python in Y Minutes](https://learnxinyminutes.com/docs/python/)
@@ -23,3 +25,8 @@
     * [Learn Julia in Y Minutes](https://learnxinyminutes.com/docs/julia/)
     * [Julia by Example](http://ow.ly/XFxBH)
     * [MATLAB-Python-Julia Dictionary](http://ow.ly/XFxWc)
+* LaTeX Resources:
+    * [Learn LaTeX in Y Minutes](https://learnxinyminutes.com/docs/latex/)
+    * [Overleaf Online Latex Editor](http://www.overleaf.com)
+    * [LaTeX Tutorials](https://www.latex-tutorial.com/tutorials/)
+    * [LaTeX Wikibook](https://en.wikibooks.org/wiki/LaTeX)
