@@ -187,14 +187,26 @@ You should use two spaces after a sentence-ending period.
 Header comments appear at the top of a file. These lines typically include the filename, author, date, version number, and a description of what the file is for and what it contains. For class assignments, headers should also course name, number, section, instructor, and assignment
 number.
 
+The detailed file documentation is best placed in a python *docstring*
+at the top of the file, rather than in ad hoc comment strings. Properly
+using docstrings helps integrate your code into the python help system.
+
  Example:
 
- 	# course: cs108
-	# Assignment: 1.1
-	# date: Feb 7, 2016
-	# email: somebody@mail.chapman.edu
-	# name: Som Ebody
-	# description: a basic start-up program.
+  """
+  File: <filename>
+
+  Copyright (c) 2016 <your name>
+
+	License: MIT
+
+  Course: PHYS227
+  Assignment: 1.1
+  Date: Feb 7, 2016
+  Email: somebody@mail.chapman.edu
+  Name: Som Ebody
+  Description: a basic start-up program.
+	"""
 
 ### Function Comments  
 
