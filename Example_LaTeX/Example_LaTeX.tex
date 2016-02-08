@@ -1,0 +1,36 @@
+\documentclass[aps,pra,12pt,amsmath,notitlepage,letterpaper]{revtex4-1}
+\usepackage[english]{babel}
+\usepackage{blindtext}
+
+\begin{document}
+\title{Example Homework Document}
+\author{Sam Student}
+\date{\today}
+
+\begin{abstract}
+Here we do the professional ($E = m c^2$) \LaTeX~document thing.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\Blindtext
+
+\section{Example 1}
+\blindmathtrue
+\subsection{Premise}
+\blindtext
+
+\subsection{Results}
+\begin{align}
+  f(x) &= \int_{-\infty}^\infty \!\! \mathrm{d}t\, g(x - t)\,F(t) \\
+       &= (g \ast F)(x) \nonumber
+\end{align}
+\Blindtext
+
+\section{Conclusion}
+\blindmathfalse
+
+\blindtext
+
+\end{document}
