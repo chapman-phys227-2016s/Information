@@ -41,9 +41,14 @@ def main():
 def test_function1():
     """Test function for nosetests
     Any function starting with name test_ will be automatically run
-    by nosetests.
+    by nosetests. Use an assert command to test a Boolean statement
+    about how your code executed.  If the assert fails, it throws
+    an exception, which is caught by nosetests and reported.
+    Anything that is printed to the screen during this function is
+    suppressed unless there is a failure, where it can be used for
+    debugging.
     """
-    pass
+    assert True
 
 class class1(object):
     """Class docstring
@@ -51,7 +56,7 @@ class class1(object):
     def __init__(self, *args, **kwargs):
         """Class constructor
         The self parameter refers to the object instance (identical to
-        this in C++/Java
+        'this' in C++/Java).
         """
         pass
     
